@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global Reset ─────────────────────────────────── */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0f1e;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Blueprint Grid Texture ───────────────────────── */
+.blueprint-grid {
+  background-color: #0a0f1e;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 214, 0, 0.04) 0px,
+      rgba(255, 214, 0, 0.04) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 214, 0, 0.04) 0px,
+      rgba(255, 214, 0, 0.04) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+}
+
+/* ── File Upload Dropzone ─────────────────────────── */
+.dropzone {
+  border: 2px dashed #FFD600;
+  background: #111827;
+  transition: background 0.2s ease;
+}
+
+.dropzone:hover {
+  background: #1a2233;
+}
+
+/* ── Focus Styles ─────────────────────────────────── */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #FFD600 !important;
+  box-shadow: 0 0 0 1px #FFD600;
+}
+
+/* ── Selection ────────────────────────────────────── */
+::selection {
+  background: #FFD600;
+  color: #0a0f1e;
+}
+
+/* ── Scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0f1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD600;
+}
