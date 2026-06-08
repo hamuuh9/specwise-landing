@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+/* ── Font Imports handled in index.html via <link> ── */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ── Global Reset ─────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════
+   GLOBAL RESET
+═══════════════════════════════════════════════════════ */
 *,
 *::before,
 *::after {
@@ -19,72 +21,415 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #0a0f1e;
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  background-color: #F5F0E8;
+  color: #0B0B0B;
+  font-family: 'Space Grotesk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* ── Blueprint Grid Texture ───────────────────────── */
-.blueprint-grid {
-  background-color: #0a0f1e;
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 214, 0, 0.04) 0px,
-      rgba(255, 214, 0, 0.04) 1px,
-      transparent 1px,
-      transparent 40px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 214, 0, 0.04) 0px,
-      rgba(255, 214, 0, 0.04) 1px,
-      transparent 1px,
-      transparent 40px
-    );
-}
-
-/* ── File Upload Dropzone ─────────────────────────── */
-.dropzone {
-  border: 2px dashed #FFD600;
-  background: #111827;
-  transition: background 0.2s ease;
-}
-
-.dropzone:hover {
-  background: #1a2233;
-}
-
-/* ── Focus Styles ─────────────────────────────────── */
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: #FFD600 !important;
-  box-shadow: 0 0 0 1px #FFD600;
-}
-
-/* ── Selection ────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════
+   SELECTION & SCROLLBAR
+═══════════════════════════════════════════════════════ */
 ::selection {
   background: #FFD600;
-  color: #0a0f1e;
+  color: #0B0B0B;
 }
 
-/* ── Scrollbar ────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #0a0f1e;
+  background: #0B0B0B;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #374151;
+  background: #FFD600;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e6c200;
 }
 
-::-webkit-scrollbar-thumb:hover {
+/* ═══════════════════════════════════════════════════════
+   NEUBRUTALISM DESIGN SYSTEM
+═══════════════════════════════════════════════════════ */
+
+/* ── Hard card with offset shadow ── */
+.nb-card {
+  border: 2px solid #0B0B0B;
+  box-shadow: 4px 4px 0 #0B0B0B;
+  background: #FFFFFF;
+  transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.nb-card:hover {
+  box-shadow: 6px 6px 0 #0B0B0B;
+  transform: translate(-1px, -1px);
+}
+
+/* ── Primary button: black bg, yellow shadow ── */
+.nb-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0B0B0B;
+  color: #FFD600;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  padding: 0.9rem 2.5rem;
+  border: 2px solid #0B0B0B;
+  box-shadow: 4px 4px 0 #FFD600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow 0.12s ease, transform 0.12s ease;
+  white-space: nowrap;
+}
+
+.nb-btn-primary:hover {
+  box-shadow: 6px 6px 0 #FFD600;
+  transform: translate(-2px, -2px);
+}
+
+.nb-btn-primary:active {
+  box-shadow: 2px 2px 0 #FFD600;
+  transform: translate(2px, 2px);
+}
+
+/* ── Secondary button: yellow bg, black shadow ── */
+.nb-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   background: #FFD600;
+  color: #0B0B0B;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  padding: 0.9rem 2.5rem;
+  border: 2px solid #0B0B0B;
+  box-shadow: 4px 4px 0 #0B0B0B;
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow 0.12s ease, transform 0.12s ease;
+  white-space: nowrap;
+}
+
+.nb-btn-secondary:hover {
+  box-shadow: 6px 6px 0 #0B0B0B;
+  transform: translate(-2px, -2px);
+}
+
+.nb-btn-secondary:active {
+  box-shadow: 2px 2px 0 #0B0B0B;
+  transform: translate(2px, 2px);
+}
+
+/* ── Badge / Tag ── */
+.nb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFD600;
+  color: #0B0B0B;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border: 2px solid #0B0B0B;
+}
+
+.nb-badge-orange {
+  background: #FF6B2B;
+  color: #FFFFFF;
+}
+
+.nb-badge-dark {
+  background: #0B0B0B;
+  color: #FFD600;
+}
+
+/* ═══════════════════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════════════════ */
+.navbar-solid {
+  background: #F5F0E8;
+  border-bottom: 3px solid #0B0B0B;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* ═══════════════════════════════════════════════════════
+   BLUEPRINT DOT GRID (Hero background)
+═══════════════════════════════════════════════════════ */
+.dot-grid {
+  background-color: #F5F0E8;
+  background-image: radial-gradient(circle, #0B0B0B 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   MARQUEE / TICKER
+═══════════════════════════════════════════════════════ */
+.marquee-outer {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-inner {
+  display: inline-flex;
+  animation: marquee 32s linear infinite;
+}
+
+.marquee-inner-rev {
+  display: inline-flex;
+  animation: marquee-rev 28s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-rev {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ═══════════════════════════════════════════════════════
+   TRADES GRID CARDS
+═══════════════════════════════════════════════════════ */
+.trade-pill {
+  background: #FFFFFF;
+  border: 2px solid #0B0B0B;
+  box-shadow: 3px 3px 0 #0B0B0B;
+  padding: 10px 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0B0B0B;
+  transition: background 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease, color 0.1s ease;
+  cursor: default;
+}
+
+.trade-pill:hover {
+  background: #FFD600;
+  box-shadow: 5px 5px 0 #0B0B0B;
+  transform: translate(-1px, -1px);
+}
+
+/* ═══════════════════════════════════════════════════════
+   HOW IT WORKS STEPS
+═══════════════════════════════════════════════════════ */
+.step-card {
+  background: #F5F0E8;
+  border: 2px solid #0B0B0B;
+  box-shadow: 4px 4px 0 #0B0B0B;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.step-card:hover {
+  box-shadow: 6px 6px 0 #0B0B0B;
+  transform: translate(-2px, -2px);
+}
+
+.step-number-bg {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 120px;
+  color: rgba(255, 214, 0, 0.15);
+  line-height: 1;
+  pointer-events: none;
+  select-none: none;
+  user-select: none;
+}
+
+/* ═══════════════════════════════════════════════════════
+   WHY SPECWISE FEATURE BLOCKS
+═══════════════════════════════════════════════════════ */
+.feature-block {
+  border: 2px solid rgba(255, 214, 0, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.feature-block:hover {
+  border-color: #FFD600;
+  background: rgba(255, 214, 0, 0.06);
+}
+
+/* ═══════════════════════════════════════════════════════
+   CTA SECTION
+═══════════════════════════════════════════════════════ */
+.cta-stripe {
+  background: #FFD600;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-stripe::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(0, 0, 0, 0.04) 10px,
+    rgba(0, 0, 0, 0.04) 12px
+  );
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════
+   FORM INPUTS (Request page)
+═══════════════════════════════════════════════════════ */
+.nb-input {
+  width: 100%;
+  background: #FFFFFF;
+  border: 2px solid #0B0B0B;
+  color: #0B0B0B;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1rem;
+  transition: box-shadow 0.15s ease;
+  outline: none;
+}
+
+.nb-input::placeholder {
+  color: #9CA3AF;
+}
+
+.nb-input:focus {
+  box-shadow: 3px 3px 0 #FFD600;
+  border-color: #0B0B0B;
+}
+
+select.nb-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230B0B0B' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 2.5rem;
+}
+
+.nb-label {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6B7280;
+  margin-bottom: 6px;
+}
+
+/* ── Dropzone ── */
+.nb-dropzone {
+  border: 2px dashed #0B0B0B;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.nb-dropzone:hover,
+.nb-dropzone.drag-over {
+  background: #FFFDE0;
+  border-color: #FFD600;
+}
+
+/* ── Submit button ── */
+.nb-submit {
+  width: 100%;
+  background: #0B0B0B;
+  color: #FFD600;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  padding: 1rem 0;
+  border: 2px solid #0B0B0B;
+  box-shadow: 4px 4px 0 #FFD600;
+  cursor: pointer;
+  transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.nb-submit:hover {
+  box-shadow: 6px 6px 0 #FFD600;
+  transform: translate(-2px, -2px);
+}
+
+.nb-submit:active {
+  box-shadow: 2px 2px 0 #FFD600;
+  transform: translate(2px, 2px);
+}
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════ */
+.footer-link {
+  color: #9CA3AF;
+  text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+  position: relative;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FFD600;
+  transition: width 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #FFD600;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* ═══════════════════════════════════════════════════════
+   UTILITY: Prevent FOUC on hero text
+═══════════════════════════════════════════════════════ */
+.hero-text-visible {
+  opacity: 1 !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE MENU
+═══════════════════════════════════════════════════════ */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #F5F0E8;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid #0B0B0B;
 }
