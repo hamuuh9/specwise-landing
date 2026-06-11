@@ -168,7 +168,7 @@ function HeroSection() {
 
         {/* Stat chips on the panel */}
         <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col gap-3 w-full px-10">
-          {['23 TRADES COVERED', 'DALLAS TX', 'BID-READY ACCURACY'].map((stat, i) => (
+          {['23 TRADES COVERED', 'NATIONWIDE', 'BID-READY ACCURACY'].map((stat, i) => (
             <motion.div
               key={stat}
               className="nb-badge nb-badge-dark w-full justify-center text-center"
@@ -202,7 +202,7 @@ function HeroSection() {
                 className="inline-block w-2 h-2 bg-yellow animate-float"
                 aria-hidden="true"
               />
-              DALLAS TX &mdash; 23 TRADES
+              NATIONWIDE &mdash; 23 TRADES
             </span>
           </motion.div>
 

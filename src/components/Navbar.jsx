@@ -122,7 +122,7 @@ export default function Navbar() {
               {/* Trust mark */}
               <div className="flex gap-3 mt-4">
                 <span className="nb-badge">48 HR DELIVERY</span>
-                <span className="nb-badge">DALLAS TX</span>
+                <span className="nb-badge">NATIONWIDE</span>
               </div>
             </div>
           </motion.div>
