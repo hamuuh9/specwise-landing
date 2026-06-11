@@ -38,7 +38,7 @@ export default function Navbar() {
               <span className="font-bebas text-ink text-lg leading-none tracking-widest">SW</span>
             </span>
             <span className="font-bebas text-ink text-xl tracking-widest leading-none">
-              SPECWISE<span className="text-muted font-bebas"> ESTIMATING</span>
+              SPECWISE<span className="text-muted font-bebas"> ESTIMATINGS</span>
             </span>
           </Link>
 

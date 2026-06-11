@@ -378,7 +378,7 @@ export default function Request() {
                           id="field-phone"
                           type="tel"
                           required
-                          placeholder="(214) 555-1234"
+                          placeholder="Your phone number"
                           className="nb-input"
                           autoComplete="tel"
                         />
@@ -470,7 +470,7 @@ export default function Request() {
 
                       {/* Disclaimer */}
                       <p className="font-grotesk text-muted text-xs leading-relaxed">
-                        By submitting this form, you agree that Specwise Estimations LLC will contact
+                        By submitting this form, you agree that Specwise Estimatings LLC will contact
                         you regarding your estimate request. Your information is kept confidential.
                       </p>
 

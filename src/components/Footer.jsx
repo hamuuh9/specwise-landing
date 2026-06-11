@@ -21,7 +21,7 @@ export default function Footer() {
                 <span className="font-bebas text-ink text-lg leading-none tracking-widest">SW</span>
               </span>
               <span className="font-bebas text-white text-xl tracking-widest leading-none">
-                SPECWISE <span className="text-muted">ESTIMATING</span>
+                SPECWISE <span className="text-muted">ESTIMATINGS</span>
               </span>
             </div>
 
@@ -59,24 +59,15 @@ export default function Footer() {
             <ul className="space-y-3" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li>
                 <a
-                  href="mailto:info@specwiseestimations.com"
+                  href="mailto:info@specwiseestimatings.com"
                   className="footer-link"
                   id="footer-email"
                 >
-                  info@specwiseestimations.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+12145551234"
-                  className="footer-link"
-                  id="footer-phone"
-                >
-                  (214) 555-1234
+                  info@specwiseestimatings.com
                 </a>
               </li>
               <li className="text-muted text-sm font-grotesk">
-                Dallas, TX
+                1001 S Main St # 5332 Kallispell, MT 59901
               </li>
             </ul>
           </div>
@@ -107,7 +98,7 @@ export default function Footer() {
           style={{ borderTop: '1px solid rgba(255, 214, 0, 0.15)' }}
         >
           <p className="font-grotesk text-muted text-sm">
-            &copy; {year} Specwise Estimations LLC. All rights reserved.
+            &copy; {year} Specwise Estimatings LLC. All rights reserved.
           </p>
           <p className="font-grotesk text-muted text-xs">
             Professional estimates. Honest pricing. Fast delivery.
